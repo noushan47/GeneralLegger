@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounting_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Accounting Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Landscaping Services</fullName>
+                <default>false</default>
+                <label>Landscaping Services</label>
+            </value>
+            <value>
+                <fullName>Job Materials</fullName>
+                <default>false</default>
+                <label>Job Materials</label>
+            </value>
+            <value>
+                <fullName>Plants and Soil</fullName>
+                <default>false</default>
+                <label>Plants and Soil</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable (A/R)</fullName>
+                <default>false</default>
+                <label>Accounts Receivable (A/R)</label>
+            </value>
+            <value>
+                <fullName>Undeposited Funds</fullName>
+                <default>false</default>
+                <label>Undeposited Funds</label>
+            </value>
+            <value>
+                <fullName>Board of Equalization Payable</fullName>
+                <default>false</default>
+                <label>Board of Equalization Payable</label>
+            </value>
+            <value>
+                <fullName>Pest Control Services</fullName>
+                <default>false</default>
+                <label>Pest Control Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

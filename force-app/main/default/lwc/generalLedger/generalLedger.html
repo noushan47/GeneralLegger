@@ -1,0 +1,56 @@
+<template>
+    <lightning-card  title="Create New General Ledger Records/Entries">
+        <lightning-button slot="actions" label="Clone" title="Clone action" variant="brand" icon-name="action:clone"  onclick={handleClone} class="slds-p-right_x-small"></lightning-button>
+        <lightning-button slot="actions" label="Reset" title="Reset action" variant="brand" icon-name="action:reset_password"  onclick={handleReset}></lightning-button>
+
+        
+        <div slot="footer">
+            <lightning-button variant="brand" label="Save" icon-name="utility:save" title="Primary action" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            
+                
+            <template for:each={formList} for:item="form">
+                <div key={form.id}>
+                    <!-- Display form identifier -->
+                    <p class="identifier">{form.id}. New General Ledger</p>
+                    <lightning-record-edit-form object-api-name="General_Ledger__c">
+                        <lightning-messages> </lightning-messages>
+                        <div class="slds-grid slds-gutters">
+                            <!-- First Row -->
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Company__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Invoice_Number__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Transaction_Type__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Transaction_Date__c"></lightning-input-field>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-gutters">
+                            <!-- Second Row -->
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Debit__c" ></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Credit__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="Accounting_Code__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-input-field field-name="MemoDescription__c"></lightning-input-field>
+                            </div>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
